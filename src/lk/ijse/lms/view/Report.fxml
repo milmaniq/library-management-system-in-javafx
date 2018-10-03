@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lms.controller.ReportController">
+   <children>
+      <JFXButton layoutX="300.0" layoutY="133.0" onMouseClicked="#btnGetMemberReportOnClicked" style="-fx-background-color: red;" text="Get Member Report" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="254.0" layoutY="15.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="111.0" fitWidth="117.0" layoutX="166.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8_Member_48px.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="300.0" layoutY="273.0" onMouseClicked="#btnGetBookReportOnClicked" style="-fx-background-color: red;" text="Get Book Report" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="111.0" fitWidth="117.0" layoutX="166.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8_Book_48px.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgBack" fitHeight="36.0" fitWidth="37.0" layoutX="14.0" layoutY="15.0" onMouseClicked="#btnBackOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8_Go_Back_48px_3.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

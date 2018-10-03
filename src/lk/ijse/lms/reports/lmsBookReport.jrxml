@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-12T21:42:39 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lmsBookReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="91056a1c-9ac5-4964-8e42-9ed299eac33a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="LmsConnection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * FROM tblBook]]>
+	</queryString>
+	<field name="bookIsbn" class="java.lang.Integer"/>
+	<field name="bookName" class="java.lang.String"/>
+	<field name="bookAuthor" class="java.lang.String"/>
+	<field name="bookPublisher" class="java.lang.String"/>
+	<field name="bookStatus" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="10" width="140" height="30" uuid="b7b6fdbe-08eb-4e19-b3a8-238414470547"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[All Library Books]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="743d3d78-74c5-41e5-91b5-5b4b2b3a7ff2"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ISBN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="16fa1dfa-b4c4-42be-9be0-5f1c0ada1354"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="f1190aea-5ad3-48b2-8fc2-eec5107285d4"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Author]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="34f2e7e2-0335-45ba-bbe3-d6ad291994af"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Publisher]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="89763bc9-6155-4114-b576-99a5ff1593a9"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="4" width="111" height="30" uuid="b46c2218-7b4e-48d8-9dd0-9ba132ed20f4"/>
+				<textFieldExpression><![CDATA[$F{bookIsbn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="4" width="111" height="30" uuid="93b7fb73-b202-4d7f-b833-2d6034b41402"/>
+				<textFieldExpression><![CDATA[$F{bookName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="4" width="111" height="30" uuid="41b24e23-148f-416c-a7ba-63f460a4eeae"/>
+				<textFieldExpression><![CDATA[$F{bookAuthor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="4" width="111" height="30" uuid="0525d2c9-c891-49ce-a393-7abca807242f"/>
+				<textFieldExpression><![CDATA[$F{bookPublisher}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="4" width="111" height="30" uuid="aa6bac3b-a944-4832-8adc-d1ee8c84fd0d"/>
+				<textFieldExpression><![CDATA[$F{bookStatus}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

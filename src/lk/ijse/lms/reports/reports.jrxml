@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-12T09:43:03 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reports" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0809fa81-4583-41db-b956-48304dc419dc">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="Variable" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT *, COUNT(memberId) FROM tblLend GROUP BY bookId]]>
+	</queryString>
+	<field name="memberId" class="java.lang.Integer"/>
+	<field name="bookId" class="java.lang.Integer"/>
+	<field name="lendDate" class="java.sql.Date"/>
+	<field name="COUNT(memberId)" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="20" width="185" height="30" uuid="3c7529b7-df20-4ae3-83a4-d87bd7d66261"/>
+				<text><![CDATA[memberId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="20" width="185" height="30" uuid="b75ef6ec-68ae-4d63-83f0-7844618a817e"/>
+				<text><![CDATA[bookId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="20" width="185" height="30" uuid="5a43cf8e-3d55-4296-9cb6-db9e31674581"/>
+				<text><![CDATA[lendDate]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="74" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="20" width="185" height="30" uuid="8655f2b8-df18-4ee4-bad9-785e7f839f2f"/>
+				<textFieldExpression><![CDATA[$F{memberId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="20" width="185" height="30" uuid="77bc3333-8e3f-4384-bc11-07b86e22fa11"/>
+				<textFieldExpression><![CDATA[$F{bookId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="20" width="185" height="30" uuid="423e37a4-3f83-455e-b014-4b46e64bd4c1"/>
+				<textFieldExpression><![CDATA[$F{lendDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="236" splitType="Stretch">
+			<areaChart>
+				<chart evaluationTime="Report">
+					<reportElement x="240" y="36" width="200" height="200" uuid="b3e03380-42ff-4656-bb55-1ddee0a69d22"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{lendDate}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{bookId}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{COUNT(memberId)}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<areaPlot>
+					<plot/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</areaPlot>
+			</areaChart>
+		</band>
+	</summary>
+</jasperReport>

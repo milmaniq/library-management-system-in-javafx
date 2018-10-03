@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-12T21:42:47 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lmsMemberReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a7d59c79-b256-425d-97d0-ac829b2810b4">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="LmsConnection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * FROM tblMember]]>
+	</queryString>
+	<field name="memberNic" class="java.lang.String"/>
+	<field name="memberName" class="java.lang.String"/>
+	<field name="memberAddress" class="java.lang.String"/>
+	<field name="memberContactNum" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="10" width="170" height="30" uuid="631f9231-f131-4e2d-b7fd-550591818623"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[All Library Members]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="141" height="30" uuid="27bd0923-c063-47e0-a614-6bebc6072198"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="138" height="30" uuid="1a3d756d-b551-49e8-9380-f349ea25481f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="138" height="30" uuid="cec2dcc0-7461-4322-a4b2-1069010de6c8"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="138" height="30" uuid="f566d49b-f8fc-4aea-ba1d-8a35eb98fc64"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Contact Number]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="141" height="30" uuid="acf0a06f-1620-48df-ad42-deac122cad33"/>
+				<textFieldExpression><![CDATA[$F{memberNic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="138" height="30" uuid="9d259d34-80d9-45af-850d-e612cdfd6056"/>
+				<textFieldExpression><![CDATA[$F{memberName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="138" height="30" uuid="f8d0674b-ebc1-4d7c-a411-76190469f7c1"/>
+				<textFieldExpression><![CDATA[$F{memberAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="138" height="30" uuid="3bb74746-aa1a-4e20-8ef2-263c2908b01f"/>
+				<textFieldExpression><![CDATA[$F{memberContactNum}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

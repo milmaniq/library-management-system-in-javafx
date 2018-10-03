@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lms.controller.AddMemberController">
+   <children>
+      <Label layoutX="223.0" layoutY="17.0" text="Add Member">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgClose" fitHeight="36.0" fitWidth="37.0" layoutX="549.0" layoutY="17.0" onMouseClicked="#imgCloseMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8_Cancel_48px.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtNic" layoutX="101.0" layoutY="111.0" promptText="NIC">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" layoutX="331.0" layoutY="111.0" promptText="Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" layoutX="101.0" layoutY="177.0" promptText="Address">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContactNum" layoutX="331.0" layoutY="177.0" promptText="Contact Num">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSave" layoutX="219.0" layoutY="257.0" onAction="#btnSaveOnAction" style="-fx-background-color: red;" text="Save" textFill="#fcf9f9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnClear" layoutX="331.0" layoutY="257.0" onAction="#btnClearOnAction" style="-fx-background-color: red;" text="Clear" textFill="#fcf9f9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

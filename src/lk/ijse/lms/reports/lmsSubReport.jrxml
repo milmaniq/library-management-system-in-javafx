@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-12T12:36:23 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lmsSubReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b54be71b-bd0f-4ce4-93dc-d7bb286b301b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="LmsConnection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * FROM tblBook]]>
+	</queryString>
+	<field name="bookId" class="java.lang.Integer"/>
+	<field name="bookIsbn" class="java.lang.Integer"/>
+	<field name="bookName" class="java.lang.String"/>
+	<field name="bookAuthor" class="java.lang.String"/>
+	<field name="bookPublisher" class="java.lang.String"/>
+	<field name="bookStatus" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="33" splitType="Stretch"/>
+	</title>
+	<summary>
+		<band height="407" splitType="Stretch">
+			<subreport>
+				<reportElement x="23" y="220" width="513" height="170" uuid="400ebb12-4ec4-4488-927e-e7247bd494ee"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C://Users//Ilman Iqbal//JaspersoftWorkspace//MyReports//lmsMemberReport.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="23" y="8" width="507" height="182" uuid="3ddfbf96-8821-4c90-80b4-3cbeca063abd"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C://Users//Ilman Iqbal//JaspersoftWorkspace//MyReports//lmsBookReport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

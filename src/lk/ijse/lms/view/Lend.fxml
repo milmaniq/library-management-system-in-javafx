@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lms.controller.LendController">
+   <children>
+      <Label layoutX="234.0" layoutY="17.0" text="Lend Books">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblLend" layoutX="15.0" layoutY="154.0" prefHeight="226.0" prefWidth="575.0">
+        <columns>
+          <TableColumn prefWidth="102.0" text="ISBN" />
+          <TableColumn prefWidth="88.0" text="Name" />
+            <TableColumn prefWidth="95.0" text="Author" />
+            <TableColumn prefWidth="83.0" text="Publisher" />
+            <TableColumn prefWidth="96.0" text="Lend Date" />
+            <TableColumn prefWidth="110.0" text="Returned" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="imgBack" fitHeight="36.0" fitWidth="37.0" layoutX="14.0" layoutY="17.0" onMouseClicked="#btnBackOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8_Go_Back_48px_3.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblMemberName" layoutX="234.0" layoutY="71.0" text="Label">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMemberContact" layoutX="370.0" layoutY="71.0" text="Label">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbIsbn" layoutX="32.0" layoutY="116.0" onAction="#cmbIsbnOnAction" prefHeight="25.0" prefWidth="169.0" promptText="Enter ISBN" />
+      <Label fx:id="lblBookName" layoutX="234.0" layoutY="118.0" text="Label">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookAuthor" layoutX="370.0" layoutY="118.0" text="Label">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnLend" layoutX="522.0" layoutY="113.0" onMouseClicked="#btnLendOnMouseClicked" style="-fx-background-color: red;" text="Lend" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbNic" layoutX="32.0" layoutY="69.0" onAction="#cmbNicOnAction" prefHeight="25.0" prefWidth="169.0" promptText="Enter NIC" />
+   </children>
+</AnchorPane>
